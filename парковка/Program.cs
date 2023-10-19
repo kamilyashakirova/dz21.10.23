@@ -45,7 +45,7 @@ class Car : transport
 
     public override void Stop()
     {
-        Console.WriteLine(" заглушила двигатель", Brand);
+        Console.WriteLine("{0} заглушила двигатель", Brand);
     }
 
     public override void info()
