@@ -18,9 +18,9 @@ abstract class transport
     public abstract void Park();
     public virtual void info()
     {
-        Console.WriteLine("вид транспорта: " + Type);
-        Console.WriteLine("количество колёс: " + Number);
-        Console.WriteLine("цвет: " + Color);
+        Console.WriteLine("вид транспорта: {0}", Type);
+        Console.WriteLine("количество колёс: {0}", Number);
+        Console.WriteLine("цвет: {0}", Color);
     }
 }
 
@@ -38,21 +38,21 @@ class Car : transport
         Plate = plate;
     }
 
-    public override void Start()
+       public override void Start()
     {
-        Console.WriteLine(Brand + " начала движение");
+        Console.WriteLine("{0} начала движение", Brand);
     }
 
     public override void Stop()
     {
-        Console.WriteLine(Brand + " заглушила двигатель");
+        Console.WriteLine(" заглушила двигатель", Brand);
     }
 
     public override void info()
     {
         base.info();
-        Console.WriteLine("модель машины: " + Model);
-        Console.WriteLine("номер: " + Plate);
+        Console.WriteLine("модель машины: {0}", Model);
+        Console.WriteLine("номер: {0}", Plate);
     }
     public override void Park()
     {
@@ -77,19 +77,19 @@ class Motorcycle : transport
 
     public override void Start()
     {
-        Console.WriteLine(Brand + " мотоцикл начал движение");
+        Console.WriteLine("{0} мотоцикл начал движение", Brand);
     }
 
     public override void Stop()
     {
-        Console.WriteLine(Brand + " мотоцикл остановился");
+        Console.WriteLine("{0} мотоцикл остановился", Brand);
     }
 
     public override void info()
     {
         base.info();
-        Console.WriteLine("Brand: " + Brand);
-        Console.WriteLine("Has Helmet: " + Helmet);
+        Console.WriteLine("Brand: {0}", Brand);
+        Console.WriteLine("Has Helmet: {0}", Helmet);
     }
     public override void Park()
     {
